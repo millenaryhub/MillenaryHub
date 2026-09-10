@@ -1,0 +1,18 @@
+.app-shell {
+  min-height: 100vh;
+  padding-top: 78px;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    padding-top: 68px;
+  }
+}
