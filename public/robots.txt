@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://millenaryhub.pages.dev/sitemap.xml

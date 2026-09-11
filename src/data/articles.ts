@@ -1,7 +1,5 @@
 import type { Article } from './content'
 
-export const articleActionSection = { heading: 'Put the ideas into practice', body: 'Turn the article into a small experiment instead of trying to change everything at once. First, write down the situation you are in and the result you want. Next, choose one action that can be completed within the next seven days, using resources you already have. Define what evidence would tell you that the action helped: a finished draft, a conversation, a completed practice session, a clearer number, a customer response or a decision you can explain. Keep a short record of what you expected, what actually happened and what surprised you. This makes learning more reliable than depending on memory or motivation. If the action feels too large, reduce the scope until it can be completed without a perfect day. If it depends on another person, make the request specific and give them an easy way to respond. Review the result before adding another commitment. Useful progress often comes from repeating a modest action, noticing friction and improving the system around it. Do not treat a general article as personal legal, medical, financial or professional advice. For high-consequence decisions, check current information from authoritative sources and speak with an appropriately qualified person. The aim is not to imitate someone else\'s path exactly; it is to use a sound principle in your own context, measure the result honestly and make the next decision with better information.' }
-
 export const articles: Article[] = [
   {
     id: 'article-money',
@@ -13,6 +11,7 @@ export const articles: Article[] = [
     tags: ['online income', 'side hustles'],
     href: '/blog/how-to-make-money-online',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=82',
     date: 'Sep 4, 2026',
     readTime: '12 min',
     featured: true,
@@ -36,6 +35,7 @@ export const articles: Article[] = [
     tags: ['business ideas', 'entrepreneurship'],
     href: '/blog/start-online-business-no-money',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=82',
     date: 'Aug 29, 2026',
     readTime: '12 min',
     intro: 'Starting with no budget forces useful discipline: find a specific problem, test demand early and make the first version manually. This guide shows how to begin an online business without pretending that free tools eliminate the need for time, research or customer care.',
@@ -58,6 +58,7 @@ export const articles: Article[] = [
     tags: ['digital products', 'ebooks'],
     href: '/blog/what-is-a-digital-product',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=82',
     date: 'Aug 22, 2026',
     readTime: '12 min',
     intro: 'A digital product is a useful asset delivered electronically. The best ones save time, explain a process or help someone reach a specific outcome. This guide covers formats, research, creation, testing, distribution and the practical work that continues after a product is published.',
@@ -80,6 +81,7 @@ export const articles: Article[] = [
     tags: ['sell ebooks online', 'writing'],
     href: '/blog/sell-an-ebook-online',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=1400&q=82',
     date: 'Aug 15, 2026',
     readTime: '12 min',
     intro: 'An ebook becomes easier to sell when it solves one clear problem for a specific reader. Start with usefulness and distribution, not page count. This guide takes you from topic selection and research through writing, production, launch, customer care and future updates.',
@@ -102,6 +104,7 @@ export const articles: Article[] = [
     tags: ['AI tools', 'productivity'],
     href: '/blog/best-ai-tools-productivity',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=82',
     date: 'Aug 9, 2026',
     readTime: '12 min',
     intro: 'The best AI tool is often the one that fits a repeated workflow. Start with the task, define the quality bar and review outputs carefully. This guide focuses on choosing and using AI responsibly rather than presenting a brittle list of products that may change next month.',
@@ -124,6 +127,7 @@ export const articles: Article[] = [
     tags: ['freelancing', 'career'],
     href: '/blog/start-freelancing-beginner',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=82',
     date: 'Aug 2, 2026',
     readTime: '12 min',
     intro: 'Freelancing starts with a useful outcome, not a perfect profile. Make your offer specific, show a sample and talk to people who already need it. This guide covers positioning, proof, outreach, pricing, agreements, delivery and the habits that help a beginner become dependable.',
@@ -146,6 +150,7 @@ export const articles: Article[] = [
     tags: ['digital business', 'products'],
     href: '/blog/build-digital-product-business',
     meta: '13 min read',
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=82',
     date: 'Jul 25, 2026',
     readTime: '13 min',
     intro: 'A digital product business is built through a loop: understand a need, make a useful version, share it with the right people and improve from feedback. This guide explains how to make that loop practical, ethical and repeatable.',
@@ -168,6 +173,7 @@ export const articles: Article[] = [
     tags: ['personal finance', 'habits'],
     href: '/blog/manage-money-better-financial-habits',
     meta: '12 min read',
+    image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1400&q=82',
     date: 'Jul 18, 2026',
     readTime: '12 min',
     intro: 'Better financial habits come from making the next decision visible and manageable. You do not need a perfect system to begin. This practical guide covers the basics of awareness, planning, spending, saving, debt, irregular income and safer decision-making without pretending that one budget works for everyone.',

@@ -13,6 +13,7 @@ export interface ContentItem {
   meta: string
   featured?: boolean
   icon?: string
+  image?: string
 }
 
 export interface Article extends ContentItem {
@@ -21,6 +22,13 @@ export interface Article extends ContentItem {
   date: string
   readTime: string
   intro: string
+  sections: { heading: string; body: string }[]
+}
+
+export type GuideDetail = {
+  id: string
+  title: string
+  summary: string
   sections: { heading: string; body: string }[]
 }
 
@@ -62,9 +70,33 @@ export const resources: ContentItem[] = [
 ]
 
 export const guides: ContentItem[] = [
-  { id: 'guide-business', title: 'Start a Digital Business', description: 'A five-step path from a problem worth solving to a useful first launch.', category: 'Business', type: 'Guide', tags: ['beginner', 'business'], href: '/learn#business', meta: '5 steps' },
-  { id: 'guide-ai', title: 'Learn AI Tools', description: 'Build practical AI fluency through fundamentals, prompting and real workflows.', category: 'AI', type: 'Guide', tags: ['beginner', 'AI'], href: '/learn#ai', meta: '5 steps' },
-  { id: 'guide-freelance', title: 'Build Your First Freelance Offer', description: 'Turn a skill into a clear offer, a sample and a first conversation.', category: 'Digital Skills', type: 'Guide', tags: ['career', 'skills'], href: '/learn#freelance', meta: '4 steps' },
+  { id: 'guide-business', title: 'Start a Digital Business', description: 'A five-step path from a problem worth solving to a useful first launch.', category: 'Business', type: 'Guide', tags: ['beginner', 'business'], href: '/learn/guide-business', meta: '5 steps' },
+  { id: 'guide-ai', title: 'Learn AI Tools', description: 'Build practical AI fluency through fundamentals, prompting and real workflows.', category: 'AI', type: 'Guide', tags: ['beginner', 'AI'], href: '/learn/guide-ai', meta: '5 steps' },
+  { id: 'guide-freelance', title: 'Build Your First Freelance Offer', description: 'Turn a skill into a clear offer, a sample and a first conversation.', category: 'Digital Skills', type: 'Guide', tags: ['career', 'skills'], href: '/learn/guide-freelance', meta: '5 steps' },
+]
+
+export const guideDetails: GuideDetail[] = [
+  { id: 'guide-business', title: 'Start a Digital Business', summary: 'A practical path from a real customer problem to a small, testable offer.', sections: [
+    { heading: '1. Start with a problem you can observe', body: 'Choose a group you can reach and watch how they work. Look for repeated questions, delays, manual tasks and expensive mistakes. Interview three to five people about what they do now, what frustrates them and what a better result would be worth. Do not begin by asking whether they like your idea; ask about their current behavior.' },
+    { heading: '2. Define one narrow offer', body: 'Write one sentence: “I help [customer] achieve [result] through [deliverable].” Keep the first version small enough to deliver in one or two weeks. State what is included, what is excluded, the timeline, the price and how feedback works. A narrow service or template is easier to test than a large app or broad brand.' },
+    { heading: '3. Test before you spend', body: 'Create a sample, manual service or paid pilot. Track conversations, requests for quotes, completed outcomes and repeat interest. Likes and compliments are encouraging but weaker than a person giving time, a referral or money. Use the evidence to refine the audience, offer or problem before paying for software, inventory or advertising.' },
+    { heading: '4. Deliver carefully and protect trust', body: 'Use a simple intake form, delivery checklist and written agreement. Keep customer data private, use strong passwords and enable multi-factor authentication where available. Be honest about results and correct errors early. In the United States, advertising claims must be truthful and supported; local rules vary, so check the requirements where you operate.' },
+    { heading: '5. Review one useful metric', body: 'Every week, review one measure connected to your goal: qualified conversations, paid pilots, completed projects, repeat customers or profit after costs. Keep what works, remove friction and delay expansion until the first offer is reliable. A small business grows through repeatable value, not a crowded list of features.' },
+  ] },
+  { id: 'guide-ai', title: 'Learn AI Tools', summary: 'Use AI for bounded tasks while keeping your judgment, privacy and verification in the loop.', sections: [
+    { heading: '1. Pick a repeated low-risk task', body: 'Start with summarizing your own notes, outlining a draft, sorting ideas or transforming information you already understand. Record how long the task takes and what a good result looks like. Avoid beginning with sensitive records, high-stakes decisions or work you cannot verify.' },
+    { heading: '2. Give the tool useful context', body: 'State the audience, goal, source material, constraints and desired format. Ask for assumptions and uncertainty to be listed. Break complex work into plan, draft, review and revision rather than expecting one perfect response. Save prompts that help, but judge the output by the result rather than the prompt itself.' },
+    { heading: '3. Verify before sharing', body: 'Check names, dates, numbers, citations, code, permissions and claims against reliable sources. Compare the result with the original material and keep a human review step. AI can sound confident while being wrong, incomplete or out of date.' },
+    { heading: '4. Protect information', body: 'Do not paste passwords, private contracts, customer records, health details or unpublished plans into a service unless you understand its data practices and have a lawful reason to do so. Remove identifying details and keep a manual fallback for important work.' },
+    { heading: '5. Measure the real benefit', body: 'Run a seven-day experiment using similar tasks. Compare total time, editing effort, error rate and quality with your old method. Keep the workflow only when it saves meaningful effort without lowering the standard of the work.' },
+  ] },
+  { id: 'guide-freelance', title: 'Build Your First Freelance Offer', summary: 'Turn one dependable skill into a clear offer, honest proof and a professional first conversation.', sections: [
+    { heading: '1. Choose a customer and result', body: 'Pair a skill with a specific customer need. “I design” is vague; “I create event graphics for community organizations” is easier to understand. Choose a result you can deliver reliably and a customer group whose context you can learn.' },
+    { heading: '2. Package the work', body: 'Write down the deliverables, timeline, customer inputs, revision limit, price and payment schedule. Include what is not covered. Price the whole job with communication, tools, taxes and reasonable corrections in mind instead of copying a number from someone else.' },
+    { heading: '3. Create honest proof', body: 'Make a sample from a fictional brief, improve your own project or complete a limited pilot with permission. Show the starting problem, your decisions and the result. Label samples honestly and never present another person’s work as your own.' },
+    { heading: '4. Start respectful conversations', body: 'Contact people who have a reason to need the service. Mention something specific, describe the result you can help with and offer a low-pressure next step. Keep the message brief, follow up once or twice, then stop if there is no interest.' },
+    { heading: '5. Deliver and learn', body: 'Confirm scope in writing, communicate delays early and send files with clear names. Ask what was useful and what was confusing. Track time, revenue, expenses and repeat requests so you can improve the offer without accepting work that is a poor fit.' },
+  ] },
 ]
 
 export const allContent: ContentItem[] = [...expandedArticles, ...tools, ...resources, ...guides]
