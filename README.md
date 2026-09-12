@@ -18,6 +18,16 @@ npm run preview
 
 The production output is `dist`, ready for GitHub and Cloudflare Pages. Use `npm run build` as the build command and `dist` as the output directory.
 
+## Deploy with Wrangler
+
+The checked-in `wrangler.jsonc` deploys `dist` as Cloudflare Workers static assets and uses `not_found_handling: "single-page-application"` for React routes. No `_redirects` file is needed.
+
+```bash
+npm run deploy
+```
+
+This runs the production build before `wrangler deploy`. Authenticate first with `npx wrangler login` if Wrangler asks for access.
+
 ## Project structure
 
 - `src/data` - structured local content
