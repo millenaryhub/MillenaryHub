@@ -20,7 +20,7 @@ const staticSeo: Record<string, SeoConfig> = {
   '/media': { title: 'Audio Tools for Content You Own | MillenaryHub', description: 'Explore MillenaryHub audio tools for content you created, own or have permission to process.' },
   '/audio-downloader': { title: 'Free Audio Downloader for Permitted Content | MillenaryHub', description: 'Search and prepare permitted audio from content you own or have permission to download.' },
   '/vocal-remover': { title: 'Vocal Remover and Audio Stem Tool | MillenaryHub', description: 'Separate vocals and instrumental audio locally with MillenaryHub’s vocal remover tool.' },
-  '/website-portfolio': { title: 'Website Design and Development in Uganda | MillenaryHub', description: 'Explore affordable website design and professional website development in Uganda for small businesses, growing brands and ambitious teams.' },
+  '/website-portfolio': { title: 'Website Design and Development | MillenaryHub', description: 'Explore affordable website design and professional website development for small businesses, growing brands and ambitious teams.' },
   '/about': { title: 'About MillenaryHub | Learn, Build & Earn', description: 'Learn what MillenaryHub offers: practical knowledge, digital tools, business resources, ebooks and website creation services.' },
   '/contact': { title: 'Contact MillenaryHub', description: 'Contact MillenaryHub about digital products, learning resources, website design services and collaboration.' },
   '/privacy': { title: 'Privacy Policy | MillenaryHub', description: 'Read the MillenaryHub privacy information and how browser preferences and product data are handled.' },
@@ -67,7 +67,7 @@ export default function Seo() {
       { '@type': 'BreadcrumbList', itemListElement: breadcrumbs },
     ]
     if (article) graph.push({ '@type': 'Article', headline: article.title, description: article.description, datePublished: article.date, author: { '@type': 'Organization', name: siteName }, publisher: { '@id': `${siteUrl}/#organization` }, mainEntityOfPage: canonical, image: article.image || defaultImage })
-    if (pathname === '/website-portfolio') graph.push({ '@type': 'Service', serviceType: 'Website design and development', name: 'MillenaryHub Website Portfolio', provider: { '@id': `${siteUrl}/#organization` }, areaServed: ['Uganda', 'Worldwide'], description: config.description, offers: [{ '@type': 'Offer', price: '300', priceCurrency: 'USD', name: 'Starter website package' }, { '@type': 'Offer', price: '600', priceCurrency: 'USD', name: 'Business website package' }, { '@type': 'Offer', price: '1000', priceCurrency: 'USD', name: 'Professional website package' }] })
+    if (pathname === '/website-portfolio') graph.push({ '@type': 'Service', serviceType: 'Website design and development', name: 'MillenaryHub Website Portfolio', provider: { '@id': `${siteUrl}/#organization` }, areaServed: ['Worldwide'], description: config.description, offers: [{ '@type': 'Offer', price: '300', priceCurrency: 'USD', name: 'Starter website package' }, { '@type': 'Offer', price: '600', priceCurrency: 'USD', name: 'Business website package' }, { '@type': 'Offer', price: '1000', priceCurrency: 'USD', name: 'Professional website package' }] })
     document.title = config.title
     upsertMeta('meta[name="description"]', 'name', 'description', config.description)
     upsertMeta('meta[name="robots"]', 'name', 'robots', config.noindex ? 'noindex,follow' : 'index,follow')

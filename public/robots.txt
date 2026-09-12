@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://millenaryhub.pages.dev/sitemap.xml
+Sitemap: https://millenaryhub.millenaryhub.workers.dev/sitemap.xml

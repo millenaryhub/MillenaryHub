@@ -22,7 +22,7 @@ function useSaved() {
 function Layout({ children }: { children: React.ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
-  const mobileNavRef = useRef<HTMLElement | null>(null)
+    const mobileNavRef = useRef<HTMLDivElement | null>(null)
   const location = useLocation()
   const navigate = useNavigate()
   useEffect(() => { setMenuOpen(false); window.scrollTo(0, 0) }, [location.pathname])

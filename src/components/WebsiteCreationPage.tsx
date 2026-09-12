@@ -27,7 +27,7 @@ const demoLabels: Record<PackageId, { eyebrow: string; title: string; copy: stri
 
 export default function WebsiteCreationPage() {
   const [selectedPackage, setSelectedPackage] = useState('Business')
-  const [submitted, setSubmitted] = useState(false)
+    const [submitted, setSubmitted] = useState<boolean>(false)
   const [activeDemo, setActiveDemo] = useState<PackageId | null>(null)
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function WebsiteCreationPage() {
         <div className="website-hero-copy website-reveal">
           <span className="website-kicker"><i /> MillenaryHub / Website Portfolio</span>
           <h1>WE BUILD WEBSITES THAT MAKE <em>BUSINESSES STAND OUT.</em></h1>
-          <p>Affordable website design and professional website development in Uganda for small businesses, growing brands and ambitious teams.</p>
+          <p>Affordable website design and professional website development for small businesses, growing brands and ambitious teams.</p>
           <div className="website-hero-actions"><button className="website-button website-button-bright" onClick={() => document.getElementById('website-packages')?.scrollIntoView({ behavior: 'smooth' })}>View Packages <ArrowRight size={17} /></button><button className="website-button website-button-ghost" onClick={() => scrollToRequest()}>Request a Website <Send size={16} /></button></div>
           <div className="website-proof-line"><span><Zap size={15} /> Fast by default</span><span><Smartphone size={15} /> Built for every screen</span></div>
         </div>
